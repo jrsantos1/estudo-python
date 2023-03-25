@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3406ec53-00f2-4fcd-a58a-9b0fb2371d63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/src/main/java/org/example/Calculadora.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../..//Git-Projects/EstudosJUnit/target/classes/org/example/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="61231492-719b-4a32-832f-bc78f25b061d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/EstudosPython.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EstudosPython.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automacao/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +20,17 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -48,15 +49,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
   <component name="RunManager" selected="Python.Lacos">
     <configuration name="Lacos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EstudosPython" />
@@ -127,7 +122,12 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/EstudosPython$Lacos.coverage" NAME="Lacos Coverage Results" MODIFIED="1653098717769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iniciante" />
     <SUITE FILE_PATH="coverage/EstudosPython$main.coverage" NAME="main Coverage Results" MODIFIED="1652728244020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fundamentos$agrupamento.coverage" NAME="agrupamento Coverage Results" MODIFIED="1677298308532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas" />
+    <SUITE FILE_PATH="coverage/fundamentos$var_usd_brl.coverage" NAME="var_usd_brl Coverage Results" MODIFIED="1677633597975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analise_de_dados/mercado_financeiro" />
+    <SUITE FILE_PATH="coverage/fundamentos$main.coverage" NAME="main Coverage Results" MODIFIED="1676156548835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/estrutura_de_dados/dicionarios" />
+    <SUITE FILE_PATH="coverage/fundamentos$teste_for.coverage" NAME="teste_for Coverage Results" MODIFIED="1677009197140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EstudosPython$Lacos.coverage" NAME="Lacos Coverage Results" MODIFIED="1653098717769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iniciante" />
+    <SUITE FILE_PATH="coverage/fundamentos$criar_dois_campos_dataframe.coverage" NAME="criar_dois_campos_dataframe Coverage Results" MODIFIED="1677773849658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analise_de_dados/pandas" />
   </component>
 </project>
