@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61231492-719b-4a32-832f-bc78f25b061d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/automate/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/automate/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manipulacao_de_arquivos/bsv_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/processo_teste.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
       <recent name="C:\code\estudos\python\fundamentos\manipulacao_de_arquivos\arquivos" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tests">
+  <component name="RunManager" selected="Python.main">
     <configuration name="bsv_" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EstudosPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,7 +217,8 @@
       <workItem from="1653007112324" duration="7006000" />
       <workItem from="1679969308469" duration="1578000" />
       <workItem from="1679971344910" duration="695000" />
-      <workItem from="1680057297338" duration="3241000" />
+      <workItem from="1680057297338" duration="5016000" />
+      <workItem from="1680317539950" duration="23000" />
     </task>
     <servers />
   </component>
@@ -253,7 +251,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fundamentos$agrupamento.coverage" NAME="agrupamento Coverage Results" MODIFIED="1677298308532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas" />
     <SUITE FILE_PATH="coverage/fundamentos$gravacao.coverage" NAME="gravacao Coverage Results" MODIFIED="1679797544563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manipulacao_de_arquivos/gravacao" />
-    <SUITE FILE_PATH="coverage/fundamentos$main.coverage" NAME="main Coverage Results" MODIFIED="1676156548835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/estrutura_de_dados/dicionarios" />
+    <SUITE FILE_PATH="coverage/fundamentos$main.coverage" NAME="main Coverage Results" MODIFIED="1680145009776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EstudosPython$Lacos.coverage" NAME="Lacos Coverage Results" MODIFIED="1653098717769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iniciante" />
     <SUITE FILE_PATH="coverage/fundamentos$campos_csv_ibge.coverage" NAME="campos_csv_ibge Coverage Results" MODIFIED="1679799043077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manipulacao_de_arquivos/desafios" />
     <SUITE FILE_PATH="coverage/fundamentos$arquivo_csv_basic.coverage" NAME="arquivo_csv_basic Coverage Results" MODIFIED="1679797991211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manipulacao_de_arquivos/arquivo_csv" />
