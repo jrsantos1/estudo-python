@@ -1,12 +1,4 @@
 import pandas as pd
-nome = 'wesley'
-
-if nome == 'wesley' and len(nome) > 1 or True:
-    print('é verdade')
-else:
-    print('é mentira')
-
-exit()
 
 resultados = [
 {'codsac': 'fd1664', 'nav': 2000, 'metrica': 600},
