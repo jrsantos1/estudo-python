@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 dados_df1 = [
     {'nome': 'banco_1', 'counter':'1', 'valor': 200},
     {'nome': 'banco_1', 'counter':'2', 'valor': 200},
