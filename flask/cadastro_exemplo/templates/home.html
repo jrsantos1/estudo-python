@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body style="color:darkslategray;">
+    <div class="container" style="height: 100vh;">
+        <div class="d-flex h-100 mt-5">
+        <div class="mt-2 bg-light container border-bottom shadow-lg" style="height: 100%;">
+            <h3 class="mt-5"> Insira os dados! </h3>
+                <form action="/cadastrar" method="post" id="form_cadastro">
+                    <div class="container">
+                        <label class="mt-2" for="ds"> Emissor </label>
+                        <input class="form-control" type="text" id="emissor" value="" name="emissor">
+
+                        <label class="mt-2" for="ds"> Ticker </label>
+                        <input class="form-control" type="text" id="ticker" value="" name="ticker">
+
+                        <label class="mt-2" for="ds"> CNPJ </label>
+                        <input class="form-control" type="text" id="cpnj" value="" name="cnpj">
+
+                        <label class="mt-2" for="ds"> Tipo ativo</label>
+                        <select  class="form-control" name="tipo_ativo" id="">
+                            <option  value="DPGE"> DPGE </option>
+                            <option  value="DBES"> DBES </option>
+                            <option  value="OUTROS"> OUTROS </option>
+                        </select>
+
+                        <hr>
+                        <h5> Limites </h5>
+                        <div class="w-80 d-flex mt-5 row">
+                            <div class="col">
+                                <label for="" class="mt-2"> Tipo limite </label>
+                                <select  class="form-control" name="tipo_limite" id="tipo_limite">
+                                    <option  value="DPGE"> RT </option>
+                                    <option  value="DBES"> TERCEIROS </option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="" class="mt-2"> Prazo Limite (Anos) </label>
+                                <input class="form-control" type="text" name="prazo_limite" id="prazo_limite">
+                            </div>
+                            <div class="col">
+                                <label for="" class="mt-2"> Valor Limite </label>
+                                <input class="form-control" type="text" name="valor_limite" id="valor_limite">
+                            </div>
+                            <div class="col d-flex  align-items-end">
+                                <button type="button" class="btn btn-primary" onclick="adicionarLimite()"> + </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table class="table table-striped mt-5" id="tb_limites">
+                            <thead >
+                                <tr >
+                                    <th> Tipo Limite </th>
+                                    <th> Prazo Limite </th>
+                                    <th> Valor Limite </th>
+                                    <th> Remover </th>
+                                </tr>
+                            </thead>
+                            <tbody id="tb_limites_body">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <input type="text" name="lista_limites" id="lista_limites" style="display: none;">
+
+                        <input class="btn btn-primary mt-5" type="submit" value="Enviar para aprovação">
+                    </div>
+                    
+                </form>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script>
+
+function adicionarLimite(){
+    
+    const tr = document.createElement('tr')
+    const prazo_limite = document.createElement('td')
+    const tipo_limite = document.createElement('td')
+    const valor_limite = document.createElement('td')
+    const remover = document.createElement('td')
+    
+    const tbody = document.getElementById('tb_limites_body')
+    const value_prazo_limite = document.getElementById('prazo_limite').value
+    const value_tipo_limite = document.getElementById('tipo_limite').value
+    const value_valor_limite = document.getElementById('valor_limite').value        
+    
+    prazo_limite.textContent = value_prazo_limite
+    tipo_limite.textContent = value_tipo_limite
+    valor_limite.textContent = value_valor_limite
+    remover.textContent = 'X'
+
+    tr.appendChild(tipo_limite)
+    tr.appendChild(prazo_limite)
+    tr.appendChild(valor_limite)
+    tr.appendChild(remover)
+    
+    tbody.appendChild(tr)
+
+
+    const lista_limites = []
+
+    const rows = tbody.rows;
+    // Agora você pode iterar pelas linhas e fazer o que for necessário com elas
+    for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        console.log(row)
+        // Aqui você pode acessar cada célula da linha (td) e fazer o que precisar com os dados
+        console.log(row.cells[0].textContent); // Acessando o conteúdo da primeira célula (coluna) da linha
+        obj_limite = {
+            tipo_limite: row.cells[0].textContent,
+            prazo_limite: row.cells[1].textContent,
+            valor_limite: row.cells[2].textContent
+        }
+        lista_limites.push(obj_limite)
+        console.log(lista_limites)
+
+}
+}
+
+document.getElementById('form_cadastro').addEventListener('submit', e => {
+    e.preventDefault();
+    const tbody = document.getElementById('tb_limites_body')
+    const rows = tbody.rows;
+    const lista_limites = []
+
+    for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        console.log(row)
+        // Aqui você pode acessar cada célula da linha (td) e fazer o que precisar com os dados
+        console.log(row.cells[0].textContent); // Acessando o conteúdo da primeira célula (coluna) da linha
+        obj_limite = {
+            tipo_limite: row.cells[0].textContent,
+            prazo_limite: row.cells[1].textContent,
+            valor_limite: row.cells[2].textContent
+        }
+        lista_limites.push(obj_limite)
+
+    }
+
+    const jsonLimites = JSON.stringify(lista_limites)
+
+    console.log(jsonLimites)
+
+    limites = document.getElementById('lista_limites')
+    lista_limites.value = jsonLimites
+    e.target.submit();
+
+})
+
+
+function formHandler(){
+
+}
+
+obj = [
+{
+    nome: "jhonatan",
+    sobrenome: "ribeiro"
+},
+{
+    nome: "patricia",
+    sobrenome: "camargo"
+}
+]
+
+const value_input = document.getElementById('pessoas')
+value_input.value = JSON.stringify(obj)
+
+</script>
+
+</html>
