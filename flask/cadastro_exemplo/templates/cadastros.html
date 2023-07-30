@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex col">
+            
+            <a class="navbar-brand p-2" href="#">
+                <h5> LOGO </h5>
+              </a>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
+            </li>
+
+            <li class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Aprovar 
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"> Aprovar </a></li>
+                <li><a class="dropdown-item" href="cadastros"> Histórico </a></li>
+              </ul>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex col">
+          
+            <div class="d-flex justify-content-end"> 
+               <span class="nav-link text-primary"> BEM VINDO, {{ current_user.racf.upper()}}! </span>  <span class="nav-link text-danger"> <a href="/logout" style="text-decoration: none;" class="text-danger">  SAIR  </a></span> 
+            </div>
+
+        </ul>
+
+    </nav>
+    <div class="container mt-5"> 
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th> emissor </th>
+                <th> ticker </th>
+                <th> cnpj</th>
+                <th> tipo_ativo</th>
+                <th> valor_limite</th>
+                <th> prazo_limite</th>
+                <th> tipo_limite</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cadastro in cadastros %}
+            <tr>
+                <td> {{ cadastro.emissor }}</td>
+                <td> {{ cadastro.ticker }}</td>
+                <td> {{ cadastro.cnpj }}</td>
+                <td> {{ cadastro.tipo_ativo }}</td>
+                <td> {{ cadastro.valor_limite }}</td>
+                <td> {{ cadastro.prazo_limite }}</td>
+                <td> {{ cadastro.tipo_limite }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
