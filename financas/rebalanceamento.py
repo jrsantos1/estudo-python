@@ -10,6 +10,7 @@ ativos = yf.Tickers(tickers)
 df = ativos.history(period='2y')
 precos = df['Close']
 precos = precos.reset_index()
+precos_reb_diario = precos.copy()
 preco_retornos = precos.copy()
 preco_retornos[tickers] = preco_retornos[tickers].pct_change()
 retornos = precos[tickers].pct_change()
@@ -19,11 +20,16 @@ def sem_reb(row, preco, retornos, pesos: list, ativos: list):
     data = row['Date']
     linha = preco[preco['Date'] == data].index
     ativo_peso = zip(ativos, pesos)
+    total_carteira = []
     if linha == 0:
         for ativo in ativo_peso:
             row[ativo[0]] = ativo[1] * 100
         precos.iloc[linha] = row
+        precos_reb_diario.iloc[linha] = row
     else:
+        """
+            Sem rebalanceamento 
+        """
         posicao_retorno = linha
         posicao_preco = linha - 1
         retorno = retornos.iloc[posicao_retorno]
@@ -31,9 +37,20 @@ def sem_reb(row, preco, retornos, pesos: list, ativos: list):
         for ativo in ativo_peso:
             preco_ativo = list(preco[ativo[0]][posicao_preco])[0]
             retorno_ativo = list(retorno[ativo[0]][posicao_retorno])[0]
-            row[ativo[0]] = preco_ativo + (retorno_ativo * preco_ativo)
+            valor_ativo = preco_ativo + (retorno_ativo * preco_ativo)
+            row[ativo[0]] = valor_ativo
+            total_carteira.append(valor_ativo)
         precos.iloc[linha] = row
-    return row
+
+        """
+            Rebalanceamento diário 
+        """
+        total_carteira = sum(total_carteira)
+        ativo_peso = zip(ativos, pesos)
+        for ativo in ativo_peso:
+            row[ativo[0]] = ativo[1] * total_carteira
+        precos_reb_diario.iloc[linha] = row
+
 
 precos.apply(lambda x: sem_reb(x, precos, retornos=retornos, pesos=pesos, ativos=tickers) ,axis=1)
 
