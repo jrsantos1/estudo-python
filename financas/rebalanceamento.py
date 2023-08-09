@@ -34,12 +34,15 @@ def sem_reb(row, preco, retornos, pesos: list, ativos: list):
         posicao_preco = linha - 1
         retorno = retornos.iloc[posicao_retorno]
         preco = preco.iloc[posicao_preco]
+        preco_reb_diario = precos_reb_diario.iloc[posicao_preco]
         for ativo in ativo_peso:
             preco_ativo = list(preco[ativo[0]][posicao_preco])[0]
+            preco_ativo_reb = list(preco_reb_diario[ativo[0]][posicao_preco])[0]
             retorno_ativo = list(retorno[ativo[0]][posicao_retorno])[0]
             valor_ativo = preco_ativo + (retorno_ativo * preco_ativo)
+            valor_ativo_reb = preco_ativo_reb + (retorno_ativo * preco_ativo_reb)
             row[ativo[0]] = valor_ativo
-            total_carteira.append(valor_ativo)
+            total_carteira.append(valor_ativo_reb)
         precos.iloc[linha] = row
 
         """
